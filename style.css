@@ -42,6 +42,20 @@ p {
     inherits: false;
 }
 
+.card::after, .card::before{
+    content:  '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(#ff4545, #4545ff, #ff4545);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 10px;
+}
+
 .card:hover::after, .card:hover::before{
     content:  '';
     position: absolute;
@@ -57,9 +71,8 @@ p {
     animation: 3s spin linear infinite;
 }
 
-.card::before {
+.card:hover::before {
     filter: blur(1.5rem);
-    opacity: 0.5;
 }
 
 @keyframes spin {
