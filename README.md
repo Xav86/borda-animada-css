@@ -14,3 +14,43 @@ ou
 background-image: conic-gradient(from var(--angle), transparent 50%,#ff4545);
 
 entre varias outras...
+
+### alterando as propriedades da classe da pra fazer um hover estatico ou animado
+
+#### estatico:
+
+``` css
+    .card:hover::after, .card:hover::before{
+    content:  '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(#ff4545, #4545ff, #ff4545);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 10px;
+    animation: 3s spin linear infinite;
+}
+```
+
+#### animado:
+
+``` css 
+    .card:hover::after, .card:hover::before{
+    content:  '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: conic-gradient(from var(--angle), #ff4545, #4545ff, #ff4545);
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 3px;
+    border-radius: 10px;
+    animation: 3s spin linear infinite;
+}
+```
