@@ -4,3 +4,13 @@ esbarrei nesse conteudo por acaso e queria muito ver como ficaria, créditos ao 
 
 ## imagem de como ficou
 ![alt text](image.png) 
+
+mechendo na propriedade background-image, da pra fazer varias variações legais:
+
+background-image: conic-gradient(from var(--angle),#ff4545 0 35%, transparent 35% 40%, #45ffaf 40% 70%,  transparent 70% 75%, #006aff 75% 95%, transparent 95% 100%);
+
+ou
+
+background-image: conic-gradient(from var(--angle), transparent 50%,#ff4545);
+
+entre varias outras...
